@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery cleanQuery Example</title>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+	<script src='jquery.cleanQuery.js'></script>
+	<script>
+	$(function() {
+		$('#FORM').cleanQuery();
+	});
+	</script>
+</head>
+<body>
+
+<form action="example.html" method="get" id="FORM">
+	<dl>
+		<dt>Keywords</dt>
+		<dd><input type="text" name="q" size="20"></dd>
+		<dt>Language</dt>
+		<dd>
+			<select name="lang">
+			<option value="">Select...</option>
+			<option value="ja">Japanese</option>
+			<option value="en">English</option>
+			</select>
+		</dd>
+		<dt>Document type</dt>
+		<dd>
+			<label><input type="checkbox" name="type[]" value="html">HTML</label>
+			<label><input type="checkbox" name="type[]" value="pdf">PDF</label>  
+			<label><input type="checkbox" name="type[]" value="txt">Plain text</label>  
+		</dd>
+	</dl>
+	<p><button type="submit">Search</button></p>
+</form>
+
+</body>
+</html>
